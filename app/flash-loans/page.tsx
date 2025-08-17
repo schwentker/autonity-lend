@@ -113,7 +113,7 @@ export default function FlashLoansPage() {
     setSteps([...steps, { id: Date.now(), action: "Swap", params: {} }])
   }
 
-  const removeStep = (id) => {
+  const removeStep = (id: string) => {
     setSteps(steps.filter((step) => step.id !== id))
   }
 
