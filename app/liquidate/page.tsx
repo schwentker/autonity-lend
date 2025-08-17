@@ -151,11 +151,11 @@ export default function LiquidatePage() {
             <CardContent className="space-y-4">
               <div className="flex items-center justify-between">
                 <Label className="text-slate-300">Bot Status</Label>
-                <Switch checked={botEnabled} onCheckedChange={setBotEnabled} />
+                <Switch checked={botEnabled} onCheckedChange={(checked) => setBotEnabled(checked === true)} />
               </div>
               <div className="flex items-center justify-between">
                 <Label className="text-slate-300">Auto Execute</Label>
-                <Switch checked={autoLiquidation} onCheckedChange={setAutoLiquidation} />
+                <Switch checked={autoLiquidation} onCheckedChange={(checked) => setAutoLiquidation(checked === true)} />
               </div>
               <div className="pt-2 border-t border-slate-700">
                 <div className="flex items-center justify-between text-sm">

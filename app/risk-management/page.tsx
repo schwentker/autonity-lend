@@ -183,12 +183,12 @@ export default function RiskManagementPage() {
 
                   <div className="flex items-center justify-between">
                     <Label className="text-slate-300">Auto Liquidation</Label>
-                    <Switch checked={autoLiquidation} onCheckedChange={setAutoLiquidation} />
+                    <Switch checked={autoLiquidation} onCheckedChange={(checked) => setAutoLiquidation(checked === true)} />
                   </div>
 
                   <div className="flex items-center justify-between">
                     <Label className="text-slate-300">Compliance Mode</Label>
-                    <Switch checked={complianceMode} onCheckedChange={setComplianceMode} />
+                    <Switch checked={complianceMode} onCheckedChange={(checked) => setComplianceMode(checked === true)} />
                   </div>
                 </CardContent>
               </Card>

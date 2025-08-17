@@ -182,7 +182,7 @@ export default function FlashLoansPage() {
                 <Label htmlFor="advanced-mode" className="text-slate-300">
                   Advanced Mode
                 </Label>
-                <Switch id="advanced-mode" checked={isAdvancedMode} onCheckedChange={setIsAdvancedMode} />
+                <Switch id="advanced-mode" checked={isAdvancedMode} onCheckedChange={(checked) => setIsAdvancedMode(checked === true)} />
               </div>
             </div>
           </CardContent>

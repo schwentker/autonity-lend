@@ -273,7 +273,7 @@ export default function GovernancePage() {
               <CardContent className="space-y-4">
                 <div className="flex items-center justify-between">
                   <div className="flex items-center space-x-2">
-                    <Checkbox id="proxy-voting" checked={proxyVoting} onCheckedChange={setProxyVoting} />
+                    <Checkbox id="proxy-voting" checked={proxyVoting} onCheckedChange={(checked) => setProxyVoting(checked === true)} />
                     <Label htmlFor="proxy-voting">Enable Proxy Voting</Label>
                   </div>
                   <Badge className="bg-green-500/20 text-green-400 border-green-500/30">

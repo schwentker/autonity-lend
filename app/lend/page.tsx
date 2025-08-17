@@ -230,7 +230,7 @@ export default function LendPage() {
                         <span className="text-white">Use as collateral</span>
                         <Info className="w-4 h-4 text-slate-400" />
                       </div>
-                      <Switch checked={useAsCollateral} onCheckedChange={setUseAsCollateral} />
+                      <Switch checked={useAsCollateral} onCheckedChange={(checked) => setUseAsCollateral(checked === true)} />
                     </div>
 
                     {/* LNTN Yield Toggle */}
@@ -241,7 +241,7 @@ export default function LendPage() {
                           <span className="text-white">Enable yield-bearing collateral</span>
                           <Info className="w-4 h-4 text-slate-400" />
                         </div>
-                        <Switch checked={lntnYieldToggle} onCheckedChange={setLntnYieldToggle} />
+                        <Switch checked={lntnYieldToggle} onCheckedChange={(checked) => setLntnYieldToggle(checked === true)} />
                       </div>
                     )}
                   </CardContent>

@@ -316,7 +316,7 @@ export default function MobilePage() {
                 <p className="text-white font-medium text-sm">Push Notifications</p>
                 <p className="text-xs text-slate-400">Receive alerts on your device</p>
               </div>
-              <Switch checked={notifications} onCheckedChange={setNotifications} />
+              <Switch checked={notifications} onCheckedChange={(checked) => setNotifications(checked === true)} />
             </div>
 
             <div className="flex items-center justify-between">
@@ -324,7 +324,7 @@ export default function MobilePage() {
                 <p className="text-white font-medium text-sm">Price Alerts</p>
                 <p className="text-xs text-slate-400">Asset price movements</p>
               </div>
-              <Switch checked={priceAlerts} onCheckedChange={setPriceAlerts} />
+              <Switch checked={priceAlerts} onCheckedChange={(checked) => setPriceAlerts(checked === true)} />
             </div>
 
             <div className="flex items-center justify-between">
@@ -332,7 +332,7 @@ export default function MobilePage() {
                 <p className="text-white font-medium text-sm">Liquidation Alerts</p>
                 <p className="text-xs text-slate-400">Health factor warnings</p>
               </div>
-              <Switch checked={liquidationAlerts} onCheckedChange={setLiquidationAlerts} />
+              <Switch checked={liquidationAlerts} onCheckedChange={(checked) => setLiquidationAlerts(checked === true)} />
             </div>
           </CardContent>
         </Card>
