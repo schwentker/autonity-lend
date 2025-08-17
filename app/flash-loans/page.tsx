@@ -107,7 +107,7 @@ export default function FlashLoansPage() {
   const [selectedAsset, setSelectedAsset] = useState("ATN")
   const [gasLimit, setGasLimit] = useState("500000")
   const [steps, setSteps] = useState([{ id: 1, action: "Flash Loan", params: {} }])
-  const [profitEstimate, setProfitEstimate] = useState(null)
+  const [profitEstimate, setProfitEstimate] = useState<number | null>(null)
 
   const addStep = () => {
     setSteps([...steps, { id: Date.now(), action: "Swap", params: {} }])
