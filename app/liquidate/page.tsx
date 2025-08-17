@@ -89,7 +89,7 @@ export default function LiquidatePage() {
   const [maxGasPrice, setMaxGasPrice] = useState("50")
   const [selectedPosition, setSelectedPosition] = useState(null)
 
-  const getRiskColor = (riskLevel) => {
+  const getRiskColor = (riskLevel: string) => {
     switch (riskLevel) {
       case "Critical":
         return "text-red-400 bg-red-500/20 border-red-500/30"
