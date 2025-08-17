@@ -10,7 +10,23 @@ import { Badge } from "@/components/ui/badge"
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog"
 import { Switch } from "@/components/ui/switch"
 
-const strategyTemplates = [
+interface Strategy {
+  id: string;
+  name: string;
+  description: string;
+  icon: any;
+  code: string;
+  estimatedGas: number;
+  profitPotential: string;
+}
+
+interface Step {
+  id: number;
+  action: string;
+  params: any;
+}
+
+const strategyTemplates: Strategy[] = [
   {
     id: "arbitrage",
     name: "Cross-DEX Arbitrage",
@@ -100,13 +116,13 @@ const assets = [
 ]
 
 export default function FlashLoansPage() {
-  const [selectedStrategy, setSelectedStrategy] = useState(null)
+  const [selectedStrategy, setSelectedStrategy] = useState<Strategy | null>(null)
   const [customCode, setCustomCode] = useState("")
   const [isAdvancedMode, setIsAdvancedMode] = useState(false)
   const [flashAmount, setFlashAmount] = useState("")
   const [selectedAsset, setSelectedAsset] = useState("ATN")
   const [gasLimit, setGasLimit] = useState("500000")
-  const [steps, setSteps] = useState([{ id: 1, action: "Flash Loan", params: {} }])
+  const [steps, setSteps] = useState<Step[]>([{ id: 1, action: "Flash Loan", params: {} }])
   const [profitEstimate, setProfitEstimate] = useState<number | null>(null)
 
   const addStep = () => {
